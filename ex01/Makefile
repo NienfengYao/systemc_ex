@@ -1,14 +1,9 @@
-# export LD_LIBRARY_PATH=/usr/local/systemc-2.3.0/lib-linux64
+# Compile without Makefile
+# 	export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/systemc-2.3.0/lib-linux64
+# 	g++ -g -o main main.cpp fir.cpp tb.cpp -I. -I/usr/local/systemc-2.3.0/include -L/usr/local/systemc-2.3.0/lib-linux64 -lsystemc -lstdc++ -lm
+# 		-g  Produce debugging information in the operating system's native format (stabs, COFF, XCOFF, or DWARF 2).  GDB can work with this debugging information.
 
-#  -g  Produce debugging information in the operating system's native format (stabs, COFF, XCOFF, or DWARF 2).  GDB can work with this debugging information.
-
-# diff 
-# -w, --ignore-all-space
-#               ignore all white space
-
-
-
-#g++ -g -o main main.cpp fir.cpp tb.cpp -I. -I/usr/local/systemc-2.3.0/include -L/usr/local/systemc-2.3.0/lib-linux64 -lsystemc -lstdc++ -lm
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/systemc-2.3.0/lib-linux64
 
 SYSTEMC=/usr/local/systemc-2.3.0
 SYSTEMC_ARCH=linux64
@@ -54,6 +49,9 @@ clean:
 GOLD_DIR = ./golden
 GOLD_FILE = $(GOLD_DIR)/ref_output.dat
 
+# diff 
+# -w, --ignore-all-space
+#               ignore all white space
 cmp_result:
 	@echo "********************************************************"
 	@if diff -w $(GOLD_FILE) ./output.dat ; then \

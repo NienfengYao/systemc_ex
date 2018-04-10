@@ -1,29 +1,33 @@
 * Reference:
-	FORTE DESIGN SYSTEM: Learn SystemC (https://www.youtube.com/watch?v=NCFxBGLB5xs&index=1&list=PLcvQHr8v8MQLj9tCYyOw44X1PLisEsX-J)
+	* FORTE DESIGN SYSTEM: Learn SystemC (https://www.youtube.com/watch?v=NCFxBGLB5xs&index=1&list=PLcvQHr8v8MQLj9tCYyOw44X1PLisEsX-J)
 
+================================================================
 * Issues:
-** guard condition doesn't work.
+	* guard condition doesn't work.
 
 
+================================================================
 * How to run:
-** export LD_LIBRARY_PATH=/usr/local/systemc-2.3.0/lib-linux64
+	* export LD_LIBRARY_PATH=/usr/local/systemc-2.3.0/lib-linux64
 
-** hello
-	g++ -I. -I/usr/local/systemc-2.3.0/include -L. -L/usr/local/systemc-2.3.0/lib-linux64 -o hello hello.cpp -lsystemc -lm
-	./hello
-	rm hello
+	* hello
+		g++ -I. -I/usr/local/systemc-2.3.0/include -L. -L/usr/local/systemc-2.3.0/lib-linux64 -o hello hello.cpp -lsystemc -lm
+		./hello
+		rm hello
 
-** and2 (It should be not a runnable case, miss something)
-	g++ -I. -I/usr/local/systemc-2.3.0/include -L. -L/usr/local/systemc-2.3.0/lib-linux64 -o and2 and2.cpp -lsystemc -lm
-	./and2
-		Error: (E109) complete binding failed: port not bound: port 'top.port_3' (sc_in)
-	rm and2
+	* and2 (It should be not a runnable case, miss something)
+		g++ -I. -I/usr/local/systemc-2.3.0/include -L. -L/usr/local/systemc-2.3.0/lib-linux64 -o and2 and2.cpp -lsystemc -lm
+		./and2
+			Error: (E109) complete binding failed: port not bound: port 'top.port_3' (sc_in)
+		rm and2
 
 
-** TestBench + FIR Filter (Finite Impulse Response Filter) 
-*** g++
-	g++ -g -o main main.cpp fir.cpp tb.cpp -I. -I/usr/local/systemc-2.3.0/include -L/usr/local/systemc-2.3.0/lib-linux64 -lsystemc -lstdc++ -lm
+	* TestBench + FIR Filter (Finite Impulse Response Filter) 
+		* g++
+			g++ -g -o main main.cpp fir.cpp tb.cpp -I. -I/usr/local/systemc-2.3.0/include -L/usr/local/systemc-2.3.0/lib-linux64 -lsystemc -lstdc++ -lm
+			./main
+			rm main
 
-*** Makefile
-	make
-	make clean
+		* Makefile
+			make all
+			make clean
