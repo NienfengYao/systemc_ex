@@ -1,0 +1,11 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+SC_MODULE	exor2.h	/^SC_MODULE(exor2)$/;"	f
+SC_MODULE	mon.h	/^SC_MODULE(mon) {$/;"	f
+SC_MODULE	nand2.h	/^SC_MODULE(nand2)          \/\/ declare nand2 sc_module$/;"	f
+SC_MODULE	stim.h	/^SC_MODULE(stim)$/;"	f
+sc_main	main.cpp	/^int sc_main(int argc, char* argv[])$/;"	f

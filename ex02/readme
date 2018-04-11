@@ -1,0 +1,40 @@
+Doulus: SystemC Tutorial (https://www.doulos.com/knowhow/systemc/tutorial/)
+
+Status: Pending
+	Havn't understand the content
+
+
+ g++ -g -o main main.cpp nand.cpp exor.cpp -I. -I/usr/local/systemc-2.3.0/include -L/usr/local/systemc-2.3.0/lib-linux64 -lsystemc -lstdc++ -lm
+ 
+ export LD_LIBRARY_PATH=/usr/local/systemc-2.3.0/lib-linux64
+  g++ -g -o exor exor.cpp -I. -I/usr/local/systemc-2.3.0/include -L/usr/local/systemc-2.3.0/lib-linux64 -lsystemc -lstdc++ -lm
+  ./exor
+  
+  
+  
+  Issue: Waveform Tracing doesn't work
+  
+     Time A B F
+       0 s 0 0 0
+       0 s 0 0 1
+     10 ns 0 1 1
+     20 ns 1 0 1
+     30 ns 1 1 0
+
+
+	 
+Constructing stim Stimulus
+Constructing nand2 exor2.N1
+Constructing nand2 exor2.N2
+Constructing nand2 exor2.N3
+Constructing nand2 exor2.N4
+Constructing exor2 exor2
+Constructing mon Monitor
+      Time A B F
+       0 s 0 0 0
+      1 ns 0 0 0
+     11 ns 0 1 1
+     21 ns 1 0 1
+     31 ns 1 1 0
+	 
+  g++ -g -o stack stack.cpp -I. -I/usr/local/systemc-2.3.0/include -L/usr/local/systemc-2.3.0/lib-linux64 -lsystemc -lstdc++ -lm
